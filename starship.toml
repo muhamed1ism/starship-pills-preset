@@ -1,0 +1,169 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+command_timeout = 1500
+
+format = """
+[](fg:color_bg1)\
+$os\
+$username\
+$hostname\
+[ ](fg:color_bg1)\
+$directory\
+
+$c\
+$dotnet\
+$java\	
+$kotlin\
+$nodejs\
+
+$git_branch\
+$git_status\
+
+$cmd_duration\
+\n
+$character\
+"""
+
+palette = "ccswe_dark"
+
+[palettes.ccswe_dark]
+
+color_bg1 = "#51a2da"
+color_bg2 = "#e0b757"
+color_bg3 = "#32cc7c"
+color_bg4 = "#ee4b27"
+color_bg5 = "#a1a1a1"
+
+color_c = "#6170c2"
+color_java = "#3a75b0"
+color_kotlin = "993ef9"
+color_nodejs = "#60b248"
+
+text_blue = "#769ff0"
+text_gray = "#999999"
+text_red = "#eb4d28"
+text_white = "#f2f2f2"
+text_black = "#1e1e1e"
+
+[character]
+error_symbol = "[❯](bold text_red)"
+success_symbol = "[❯](bold text_white)"
+
+[cmd_duration]
+format = "[](fg:color_bg5)[ $duration](bg:color_bg5 fg:text_black)[ ](fg:color_bg5)"
+min_time = 500
+
+[directory]
+style = "bg:color_bg2 fg:text_black"
+format = "[](fg:color_bg2)[$path]($style)[ ](fg:color_bg2)"
+truncation_length = 0
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 Documents"
+"Downloads" = "  Downloads"
+"Music" = "  Music"
+"Pictures" = "  Pictures"
+
+[git_branch]
+symbol = ""
+style = "bg:color_bg4 fg:text_black"
+format = "[](fg:color_bg4)[$symbol $branch]($style)[ ](fg:color_bg4)"
+
+[git_status]
+ahead = "⇡${count}"
+behind = "⇣${count}"
+deleted = ""
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+format = '[](fg:color_bg4)[($all_status$ahead_behind)]($style)[ ](fg:color_bg4)'
+style = "bold bg:color_bg4 fg:text_black"
+
+[hostname]
+format = "[@$hostname]($style)"
+ssh_only = true
+ssh_symbol = " "
+style = "bg:color_bg1 fg:text_black"
+
+[os]
+format = "[$symbol]($style)"
+style = "bg:color_bg1 fg:text_white"
+disabled = false
+
+[username]
+disabled = false
+format = "[ $user]($style)"
+show_always = true
+style_root = "bg:color_bg1 fg:text_red"
+style_user = "bg:color_bg1 fg:text_black"
+
+# Code symbols
+[c]
+format = '[](fg:color_c)[$symbol]($style)[ ](fg:color_c)'
+style = "bg:color_c fg:text_black"
+symbol = "  "
+
+[dotnet]
+format = '[](fg:color_dotnet)[$symbol]($style)[ ](fg:color_dotnet)'
+style = "bg:color_dotnet fg:text_black"
+symbol = "  "
+
+[java]
+format = '[](fg:color_java)[$symbol]($style)[ ](fg:color_java)'
+style = "bg:color_java fg:text_black"
+symbol = "  "
+
+[kotlin]
+format = '[](fg:color_kotlin)[$symbol]($style)[ ](fg:color_kotlin)'
+style = "bg:color_kotlin fg:text_black"
+symbol = "  "
+
+[nodejs]
+style = "bg:color_nodejs fg:text_black"
+format = '[](fg:color_nodejs)[$symbol($version)]($style)[ ](fg:color_nodejs)'
+symbol = "  "
+
+# OS Symbols
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
