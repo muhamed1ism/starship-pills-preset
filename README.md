@@ -6,7 +6,9 @@ This repository contains a custom [Starship](https://starship.rs/) configuration
 
 With this configuration, your prompt will display various information such as OS, username, current directory, git status, and programming environment details (e.g., Node.js, Python) in a clean and visually appealing pill format.
 
-![starship pills preview](./assets/starship-pills-preset-1.png)
+![starship pills preview_1](./assets/starship-pills-preset-1.png)
+
+![starship pills preview_2](./assets/starship-pills-preset-2.png)
 
 ## Features
 
